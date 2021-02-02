@@ -6,6 +6,7 @@
 #header {
     z-index: 100;
     height: 10vh;
+    width: 90vw;
     display: flex;
     align-items: center;
 }
@@ -22,16 +23,24 @@
 #discover-dropdown {
     display: flex;
     flex-direction: column;
-    margin-top: 2.5rem;
-    /* position: absolute; */
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 5vw;
+    /* margin-top: -2.5vh; */
+    width: 20vw;
+    min-width: 7.5vw;
+    border-radius: .5vw;
+    background-color: #dad6d6;
+    box-shadow: 1vh 1vh 2vh 0vh rgba(0,0,0,0.2);
     z-index: 100;
 }
 
 #discover-dropdown a {
     padding: .5rem;
+}
+
+#search-bar {
+    margin-left: 5vw;
+    height: 2.5vh;
+    width: 20vw;
 }
 
 #main {

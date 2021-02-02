@@ -1,13 +1,6 @@
 import { Component } from 'react';
 
 export default class Header extends Component {
-    state = {
-        discover: false
-    }
-
-    showDiscoverDropdown = () => {
-        this.setState({ discover: !this.state.discover })
-    }
 
     render () {
         return (
@@ -19,20 +12,16 @@ export default class Header extends Component {
                 />
                 <button 
                 id="discover-button"
-                onClick={this.showDiscoverDropdown}
+                onClick={this.props.handleClick}
                 >
                 Discover
                 </button>
-                {this.state.discover ?   
-                <div id="discover-dropdown">
-                    <a>Category 1</a>
-                    <a>Category 2</a>
-                    <a>Category 3</a>
-                    <a>Category 4</a>
-                </div>
-                :
-                null}
-                <h1></h1>
+                <input
+                id="search-bar"
+                type="text"
+                name="search"
+                placeholder="Search for Sounds..."
+                />
             </header>
         )
     }
