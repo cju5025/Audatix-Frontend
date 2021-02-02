@@ -1,17 +1,37 @@
 import './App.css';
 import './Meyer-Reset.css';
 
+import { Component } from 'react';
+
 import Header from './Components/Header';
 
-function App() {
-  return (
-    <div id="App">
-      <Header />
-      <main id="main">
+export default class App extends Component {
 
-      </main>
-    </div>
-  );
+  state = {
+    discover: false
+  }
+
+  showDiscoverDropdown = () => {
+    this.setState({ discover: !this.state.discover })
 }
 
-export default App;
+  render () {
+    return (
+      <div id="App">
+        <Header handleClick={this.showDiscoverDropdown}/>
+        <main id="main">
+          {this.state.discover ?   
+            <div id="discover-dropdown">
+                <a>Category 1</a>
+                <a>Category 2</a>
+                <a>Category 3</a>
+                <a>Category 4</a>
+            </div>
+          :
+          null}
+        </main>
+      </div>
+    )
+  }
+}
+
