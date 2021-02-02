@@ -1,7 +1,41 @@
+#App {
+    height: 100vh;
+    width: 100vw;
+}
+
 #header {
+    z-index: 100;
+    height: 10vh;
     display: flex;
+    align-items: center;
 }
 
 #logo {
-    height: 10vh;
+    height: 7.5vh;
+}
+
+#discover-button {
+    margin-left: 2.5vw;
+    padding: .5rem;
+}
+
+#discover-dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    /* position: absolute; */
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+#discover-dropdown a {
+    padding: .5rem;
+}
+
+#main {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
 }
