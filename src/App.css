@@ -12,6 +12,7 @@
 }
 
 #logo {
+    margin-left: .5vw;
     height: 7.5vh;
 }
 
@@ -44,7 +45,71 @@
 }
 
 #main {
-    background-color: black;
+    /* background-color: black; */
     height: 100vh;
     width: 100vw;
+}
+
+#signup {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin-top: 10vh;
+    margin-left: 40vw;
+}
+
+#signup-form label {
+    margin-bottom: 1.25vh;
+}
+
+#signup-form input {
+    margin-bottom: 2.5vh;
+}
+
+#sign-up-button {
+    margin-left: 5vw;
+    width: 10vw;
+}
+
+#signup-link {
+    margin-left: 40vw;
+}
+
+#signin-link {
+    margin-left: 5vw;
+}
+
+#sign-in {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+#sign-in-form {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin-top: 10vh;
+    margin-left: 40vw;
+}
+
+#sign-in-form label {
+    margin-bottom: 1.25vh;
+}
+
+#sign-in-form input {
+    margin-bottom: 2.5vh;
+}
+
+#sign-in-button {
+    margin-left: 5vw;
+    width: 10vw;
 }
