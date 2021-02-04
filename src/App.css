@@ -78,6 +78,11 @@
     width: 10vw;
 }
 
+#password-match-error-message {
+    margin: 1vw;
+    color: red;
+}
+
 #signup-link {
     margin-left: 40vw;
 }
