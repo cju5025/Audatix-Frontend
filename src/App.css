@@ -1,12 +1,14 @@
 #App {
+    background-color: #012521;
     height: 100vh;
     width: 100vw;
 }
 
 #header {
+    background-color: #012521;
     z-index: 100;
     height: 10vh;
-    width: 90vw;
+    width: 100vw;
     display: flex;
     align-items: center;
 }
@@ -17,8 +19,8 @@
 }
 
 #discover-button {
-    margin-left: 2.5vw;
-    padding: .5rem;
+    margin-left: 5vw;
+    padding: .25rem;
 }
 
 #discover-dropdown {
@@ -39,25 +41,32 @@
 }
 
 #search-bar {
-    margin-left: 5vw;
+    margin-left: 2.5vw;
     height: 2.5vh;
     width: 20vw;
 }
 
 #main {
-    /* background-color: black; */
     height: 100vh;
     width: 100vw;
+}
+
+#background-image {
+    z-index: -100;
+    transform: rotate(90deg);
+    width: 100vw;
+    height: auto;
 }
 
 #signup {
     display: flex;
     height: 100vh;
     width: 100vw;
-    background-color: white;
+    background-color: #012521;
 }
 
 #signup-form {
+    z-index: 100;
     display: flex;
     flex-direction: column;
     width: 20vw;
@@ -65,7 +74,15 @@
     margin-left: 40vw;
 }
 
+#signup-background {
+    z-index: -100;
+    transform: rotate(90deg);
+    width: 100vw;
+    height: auto;
+}
+
 #signup-form label {
+    color: white;
     margin-bottom: 1.25vh;
 }
 
@@ -84,18 +101,22 @@
 }
 
 #signup-link {
+    color: white;
     margin-left: 40vw;
+    text-decoration: none;
 }
 
 #signin-link {
+    color: white;
     margin-left: 5vw;
+    text-decoration: none;
 }
 
 #sign-in {
     display: flex;
     height: 100vh;
     width: 100vw;
-    background-color: white;
+    background-color: #012521;
 }
 
 #sign-in-form {
