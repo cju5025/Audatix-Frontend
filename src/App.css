@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+
 #App {
+    font-family: 'Big Shoulders Display', cursive;
     background-color: #012521;
     height: 100vh;
     width: 100vw;
@@ -128,12 +131,14 @@
 }
 
 #signup-link {
+    font-size: 2.5vh;
     color: white;
     margin-left: 40vw;
     text-decoration: none;
 }
 
 #signin-link {
+    font-size: 2.5vh;
     color: white;
     margin-left: 5vw;
     text-decoration: none;
