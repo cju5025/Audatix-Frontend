@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Header (props) {
         return (
             <header id="header">
-                <Link id='logo-link' to='/' >
+                <Link id='logo-link' to='/home' >
                 <img 
                 id="logo" 
                 src="https://i.ibb.co/BwQ9hh6/7aeba71c6ab745b6b2e5cf0861a3196f.png" 
