@@ -82,6 +82,7 @@ export default class Signup extends Component {
                     null
                 }
             </form>
+            <img id="signup-background" src="https://i.ibb.co/pzQJCwv/Pngtree-green-light-diamond-shaped-box-945539.jpg" />
         </div>
         )
     }

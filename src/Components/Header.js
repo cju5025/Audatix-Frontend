@@ -6,7 +6,7 @@ export default function Header (props) {
                 <Link id='logo-link' to='/' >
                 <img 
                 id="logo" 
-                src="https://i.ibb.co/KcgHynZ/7eb338a5-abe6-45fd-92cf-b7c84fc43022-200x200.png" 
+                src="https://i.ibb.co/BwQ9hh6/7aeba71c6ab745b6b2e5cf0861a3196f.png" 
                 alt="logo"
                 />
                 </Link>
