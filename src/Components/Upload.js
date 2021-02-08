@@ -1,10 +1,11 @@
 import { Component } from 'react';
+import './Upload.css';
 
-export default class SellSounds extends Component {
+export default class Upload extends Component {
 
     render () {
         return (
-            <form>
+            <form enctype="multipart/form-data" id="upload-form">
                 <input type="file" />
             </form>
         )

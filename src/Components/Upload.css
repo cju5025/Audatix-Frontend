@@ -1,0 +1,10 @@
+#upload-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#upload-form input {
+    color: white;
+    display: flex;
+}
