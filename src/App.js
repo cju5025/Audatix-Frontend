@@ -7,7 +7,7 @@ import Header from './Components/Header';
 import Signup from './Components/Signup';
 import Signin from './Components/Signin';
 import Home from './Components/Home';
-import SellSounds from './Components/SellSounds';
+import Upload from './Components/Upload';
 
 import { Route, Switch, Redirect } from 'react-router-dom';
 
@@ -38,7 +38,7 @@ export default class App extends Component {
           <Route path='/home' render={(routerProps) => <Home {...routerProps} />} />
           <Route path="/signup" render={(routerProps) => <Signup {...routerProps} />} />
           <Route path="/signin" render={(routerProps) => <Signin {...routerProps} />} />
-          <Route path="/sellsounds" render={(routerProps) => <SellSounds {...routerProps} />} />
+          <Route path="/upload" render={(routerProps) => <Upload {...routerProps} />} />
         </main>
         <Redirect to="/"/>
       </div>
