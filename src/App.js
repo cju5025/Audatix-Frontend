@@ -40,7 +40,7 @@ export default class App extends Component {
           <Route path="/signin" render={(routerProps) => <Signin {...routerProps} />} />
           <Route path="/upload" render={(routerProps) => <Upload {...routerProps} />} />
         </main>
-        <Redirect to="/"/>
+        <Redirect to="/home"/>
       </div>
     )
   }
