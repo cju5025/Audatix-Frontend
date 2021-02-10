@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 
 export default function Header (props) {
+    
+    const signOut = () => {
+        localStorage.removeItem('token');
+        window.location.reload()
+    }
+
         return (
             <header id="header">
                 <Link id='logo-link' to='/home' >
@@ -22,12 +28,22 @@ export default function Header (props) {
                 name="search"
                 placeholder="Search for Sounds..."
                 />
-                <Link id='signup-link' to='/signup'>
+                {
+                    localStorage.getItem('token')
+                    ?
+                    <Link id='signout-link' to='/home' onClick={signOut}>
+                    Sign Out
+                    </Link>
+                    :
+                    <div>
+                    <Link id='signup-link' to='/signup'>
                     Sign Up
-                </Link>
-                <Link id='signin-link' to='/signin'>
+                    </Link>
+                    <Link id='signin-link' to='/signin'>
                     Sign In
-                </Link>
+                    </Link>
+                    </div>
+                }
             </header>
         )
 }

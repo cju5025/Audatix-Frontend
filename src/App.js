@@ -8,8 +8,10 @@ import Signup from './Components/Signup';
 import Signin from './Components/Signin';
 import Home from './Components/Home';
 import Upload from './Components/Upload';
+import SoundCollection from './Containers/SoundCollection';
+import FindSoundsPage from './Containers/FindSoundsPage';
 
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
 export default class App extends Component {
 
@@ -39,6 +41,7 @@ export default class App extends Component {
           <Route path="/signup" render={(routerProps) => <Signup {...routerProps} />} />
           <Route path="/signin" render={(routerProps) => <Signin {...routerProps} />} />
           <Route path="/upload" render={(routerProps) => <Upload {...routerProps} />} />
+          <Route path="/soundCollection" render={(routerProps) => <FindSoundsPage {...routerProps} />} />
         </main>
         <Redirect to="/home"/>
       </div>

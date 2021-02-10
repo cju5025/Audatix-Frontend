@@ -24,10 +24,16 @@ export default class Signin extends Component {
                 email: this.state.email,
                 password: this.state.password
             }})
-        }).then(response => {
-            if (!response.ok) throw new Error('Incorrect email or password')
-            return response.json()
-        }).then(response => localStorage.setItem('token', response.token))
+        }).then(response => response.json())
+        .then(response => {
+            if (response.token) {
+                localStorage.setItem('token', response.token)
+                window.location.reload()
+            }
+            else {
+                throw new Error(response)
+            }
+        })
         .catch(error => alert(error.message))
     }
 
