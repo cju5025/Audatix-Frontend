@@ -8,3 +8,12 @@
     color: white;
     display: flex;
 }
+
+#upload-submit {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border-radius: .5vw;
+    width: 7.5vw;
+    height: 3.5vh;
+}
