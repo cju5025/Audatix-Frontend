@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import SearchFilter from '../Components/SearchFilter';
 import SoundCollection from './SoundCollection';
 
 export default class FindSoundsPage extends Component {
@@ -17,6 +18,7 @@ export default class FindSoundsPage extends Component {
     render() {
         return (
             <div>
+                <SearchFilter />
                 <SoundCollection sounds={this.state.sounds} />
             </div>
         )
