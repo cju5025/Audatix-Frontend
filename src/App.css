@@ -159,10 +159,16 @@
     text-decoration: none;
 }
 
+#cart-image {
+    margin-left: 45vw;
+    width: 3vw;
+    height: 4vh;
+}
+
 #signout-link {
     font-size: 3vh;
     color: white;
-    margin-left: 55vw;
+    margin-left: 5vw;
     text-decoration: none;
 }
 
@@ -194,8 +200,6 @@
     margin-left: 5vw;
     width: 10vw;
 }
-
-
 
 #search-filter-container {
     display: flex;
@@ -241,7 +245,7 @@
     color: black;
     font-size: 2vh;
     padding: 2.5vh;
-    margin-top: 5vh;
+    margin-top: 2.5vh;
     margin-left: -5vw;
 }
 
@@ -250,7 +254,25 @@
     font-size: 2vh;
     padding: .5vh;
     margin-top: 10vh;
-    margin-left: 0vw;
+    margin-left: -5vw;
+}
+
+#sound-card button {
+    font-family: 'Bebas Neue', cursive;
+    border-radius: .5vw;
+    color: white;
+    background-color: #012521;
+    width: 7.5vw;
+    min-width: 5vw;
+    height: 7.5vh;
+    min-height: 5vh;
+    margin-top: 10vw;
+    margin-left: -7.5vw;
+    margin-right: 5vw;
+}
+
+#sound-card audio:focus {
+    outline: none;
 }
 
 #sound-card audio {
@@ -259,7 +281,6 @@
     align-items: center;
     min-width: 15vw;
     height: 5vh;
-    margin-top: 15vh;
-    margin-left: -10vw;
-    padding: 2vw;
+    margin-top: 20vh;
+    margin-right: 50vw;
 }
