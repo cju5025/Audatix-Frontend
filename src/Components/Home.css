@@ -1,0 +1,48 @@
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home  p {
+    z-index: 100;
+    font-size: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: white;
+}
+
+#home button {
+    margin-bottom: 2.5vw;
+    width: 12.5vw;
+    height: 7.5vh;
+    border-radius: 10vw;
+    font-weight: 500;
+    font-size: 2vh;
+    background-color: black;
+    color: white;
+    border: .25vw solid black;
+    cursor: pointer
+}
+
+#home-background-image {
+    height: 80vh;
+    transform: rotate(270deg);
+    margin-left: -60vw;
+    margin-top: -24vh;
+}
+
+#alien {
+    height: 25vh;
+    margin-top: -30vh;
+    margin-right: -50vw;
+}
+
+#background-image {
+    z-index: -100;
+    transform: rotate(90deg);
+    width: 100vw;
+    height: auto;
+}

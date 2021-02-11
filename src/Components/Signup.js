@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 export default class Signup extends Component {
@@ -74,6 +75,7 @@ export default class Signup extends Component {
                 <input onChange={this.handleChange} value={this.state.passwordVerification} type="password" name="passwordVerification" placeholder="••••••••" />
     
                 <input type="submit" value="Sign Up" id="sign-up-button" />
+                <p>Already have an account? <Link to='/signin' id='link-to-signin'>Sign in here.</Link></p>
                 {
                     this.state.redirect
                     ?
