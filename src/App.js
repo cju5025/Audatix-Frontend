@@ -16,7 +16,7 @@ export default class App extends Component {
 
   state = {
     discover: false,
-    user_id: parseInt(localStorage.getItem('user_id'))
+    userID: parseInt(localStorage.getItem('user_id'))
   }
 
   showDiscoverDropdown = () => {
@@ -40,8 +40,8 @@ export default class App extends Component {
           <Route path='/home' render={(routerProps) => <Home {...routerProps} />} />
           <Route path="/signup" render={(routerProps) => <Signup {...routerProps} />} />
           <Route path="/signin" render={(routerProps) => <Signin {...routerProps} />} />
-          <Route path="/upload" render={(routerProps) => <Upload {...routerProps} />} />
-          <Route path="/soundCollection" render={(routerProps) => <FindSoundsPage {...routerProps} />} />
+          <Route path="/upload" render={(routerProps) => <Upload {...routerProps} userID={this.state.userID} />} />
+          <Route path="/soundCollection" render={(routerProps) => <FindSoundsPage {...routerProps} userID={this.state.userID} />} />
         </main>
         <Redirect to="/home"/>
       </div>

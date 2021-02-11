@@ -5,7 +5,7 @@ export default class SoundCollection extends Component {
 
     showSounds () {
         return this.props.sounds.map(sound => {
-            return <SoundCard sound={sound} key={sound.id}/>
+            return <SoundCard sound={sound} key={sound.id} userID={this.props.userID} />
         })
     }
 
