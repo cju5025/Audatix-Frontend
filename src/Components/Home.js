@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Component } from 'react';
+import './Home.css';
 
 export default class Home extends Component {
 

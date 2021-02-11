@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Signin extends Component {
 
@@ -49,6 +50,7 @@ export default class Signin extends Component {
                     <input onChange={this.handleChange} value={this.state.password} type="password" name="password" placeholder="••••••••" />
     
                     <input type="submit" value="Sign In" id="sign-in-button" />
+                    <p>Don't have an account yet? <Link id='link-to-signup' to='/signup' >Register here.</Link></p>
                 </form>
             </div>
         )

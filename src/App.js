@@ -9,6 +9,7 @@ import Signin from './Components/Signin';
 import Home from './Components/Home';
 import Upload from './Components/Upload';
 import FindSoundsPage from './Containers/FindSoundsPage';
+import Cart from './Components/Cart';
 
 import { Route, Redirect } from 'react-router-dom';
 
@@ -16,7 +17,15 @@ export default class App extends Component {
 
   state = {
     discover: false,
-    userID: parseInt(localStorage.getItem('user_id'))
+    userID: parseInt(localStorage.getItem('user_id')),
+    cartItems: []
+  }
+
+  componentDidMount = () => {
+    fetch('http://localhost:4000/cartitems')
+      .then(response => response.json())
+      .then(result => result.items)
+      .then(items => this.setState({ cartItems: items }))
   }
 
   showDiscoverDropdown = () => {
@@ -42,6 +51,7 @@ export default class App extends Component {
           <Route path="/signin" render={(routerProps) => <Signin {...routerProps} />} />
           <Route path="/upload" render={(routerProps) => <Upload {...routerProps} userID={this.state.userID} />} />
           <Route path="/soundCollection" render={(routerProps) => <FindSoundsPage {...routerProps} userID={this.state.userID} />} />
+          <Route path="/cart" render={(routerProps) => <Cart {...routerProps} cartItems={this.state.cartItems} />} />
         </main>
         <Redirect to="/home"/>
       </div>

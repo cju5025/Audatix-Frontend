@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Header.css';
 
 export default function Header (props) {
     
@@ -33,7 +34,9 @@ export default function Header (props) {
                     localStorage.getItem('token')
                     ?
                     <>
+                    <Link to="/cart">
                     <img id="cart-image" src="" />
+                    </Link>
                     <Link id='signout-link' to='/home' onClick={signOut}>
                     Sign Out
                     </Link>
