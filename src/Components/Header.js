@@ -32,9 +32,12 @@ export default function Header (props) {
                 {
                     localStorage.getItem('token')
                     ?
+                    <>
+                    <img id="cart-image" src="" />
                     <Link id='signout-link' to='/home' onClick={signOut}>
                     Sign Out
                     </Link>
+                    </>
                     :
                     <div>
                     <Link id='signup-link' to='/signup'>
