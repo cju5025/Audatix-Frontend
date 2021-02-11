@@ -21,8 +21,8 @@
 
 #category {
     width: 10vw;
-    margin-left: 1.25vw; 
-    margin-top: -2.5vh;
+    margin-left: 1vw; 
+    margin-top: -3vh;
     color: black;
     font-size: 2vh;
 }
@@ -32,15 +32,15 @@
     color: black;
     font-size: 2vh;
     padding: .5vh;
-    margin-top: 2.5vh;
-    margin-left: 1.5vw;
+    margin-top: 1.5vh;
+    margin-left: 1vw;
 }
 
 #button-and-audio {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 2.5vh;
+    margin-top: 4vh;
     margin-left: .25vw;
     min-width: 5vw;
     min-height: 7.5vh;
