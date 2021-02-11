@@ -16,7 +16,7 @@ export default class App extends Component {
 
   state = {
     discover: false,
-    user: {}
+    user_id: parseInt(localStorage.getItem('user_id'))
   }
 
   showDiscoverDropdown = () => {
