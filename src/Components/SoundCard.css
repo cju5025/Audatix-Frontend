@@ -1,0 +1,68 @@
+#sound-card {
+    background-color: white;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 5vh;
+    box-shadow: .25vw .25vw .25vw  #012521;
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    width: 50vh;
+    margin-left: 50vw;
+}
+
+#name {
+    margin-top: -2.5vh;
+    margin-left: -2.5vw;
+    padding: 5vh;
+    width: 10vw;
+    color: #012521;
+    font-size: 2.5vh;
+}
+
+#category {
+    width: 10vw;
+    margin-left: 1.25vw; 
+    margin-top: -2.5vh;
+    color: black;
+    font-size: 2vh;
+}
+
+
+#price {
+    color: black;
+    font-size: 2vh;
+    padding: .5vh;
+    margin-top: 2.5vh;
+    margin-left: 1.5vw;
+}
+
+#button-and-audio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2.5vh;
+    margin-left: .25vw;
+    min-width: 5vw;
+    min-height: 7.5vh;
+}
+
+#sound-card button {
+    font-family: 'Bebas Neue', cursive;
+    border-radius: .5vw;
+    color: white;
+    background-color: #012521;
+}
+
+
+#sound-card audio:focus {
+    outline: none;
+}
+
+#sound-card audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 10vw;
+    height: 5vh;
+    margin-top: 2.5vh;
+}
