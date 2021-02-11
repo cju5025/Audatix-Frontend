@@ -8,7 +8,6 @@ import Signup from './Components/Signup';
 import Signin from './Components/Signin';
 import Home from './Components/Home';
 import Upload from './Components/Upload';
-import SoundCollection from './Containers/SoundCollection';
 import FindSoundsPage from './Containers/FindSoundsPage';
 
 import { Route, Redirect } from 'react-router-dom';
@@ -16,7 +15,8 @@ import { Route, Redirect } from 'react-router-dom';
 export default class App extends Component {
 
   state = {
-    discover: false
+    discover: false,
+    user: {}
   }
 
   showDiscoverDropdown = () => {
