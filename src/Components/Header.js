@@ -4,6 +4,7 @@ export default function Header (props) {
     
     const signOut = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('user_id');
         window.location.reload()
     }
 

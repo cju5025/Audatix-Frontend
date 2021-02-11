@@ -13,7 +13,7 @@ export default class Signin extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-
+        
         fetch('http://localhost:4000/login', {
             method: 'POST',
             headers: {
@@ -28,6 +28,7 @@ export default class Signin extends Component {
         .then(response => {
             if (response.token) {
                 localStorage.setItem('token', response.token)
+                localStorage.setItem('user_id', response.user.id)
                 window.location.reload()
             }
             else {
