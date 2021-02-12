@@ -12,13 +12,13 @@ export default class Cart extends Component {
             fetch(`http://localhost:4000/sounds/${item.soundID}`)
                 .then(response => response.json())
                 .then(result => result.file)
-                .then(file => this.setState({ audioFiles: [...this.state.audioFiles, file]}))
+                .then(file => this.setState({ audioFiles: [...this.state.audioFiles, {file: file, cartItemID: item.id}]}))
         })
     }
 
     showItems = () => {
         return this.state.audioFiles.map(file => {
-            return <CartItem item={file} />
+            return <CartItem item={file} key={file.id} />
         })
     }
 
