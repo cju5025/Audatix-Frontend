@@ -21,6 +21,10 @@ export default class App extends Component {
     cartItems: []
   }
 
+  addItemToCartItems = (item) => {
+    this.setState({ cartItems: [...this.state.cartItems, item]})
+  }
+
   componentDidMount = () => {
     fetch('http://localhost:4000/cartitems')
       .then(response => response.json())
@@ -50,7 +54,7 @@ export default class App extends Component {
           <Route path="/signup" render={(routerProps) => <Signup {...routerProps} />} />
           <Route path="/signin" render={(routerProps) => <Signin {...routerProps} />} />
           <Route path="/upload" render={(routerProps) => <Upload {...routerProps} userID={this.state.userID} />} />
-          <Route path="/soundCollection" render={(routerProps) => <FindSoundsPage {...routerProps} userID={this.state.userID} />} />
+          <Route path="/soundCollection" render={(routerProps) => <FindSoundsPage {...routerProps} userID={this.state.userID} addItemToCartItems={this.addItemToCartItems} />} />
           <Route path="/cart" render={(routerProps) => <Cart {...routerProps} cartItems={this.state.cartItems} />} />
         </main>
         <Redirect to="/home"/>

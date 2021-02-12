@@ -14,7 +14,9 @@ export default function SoundCard (props) {
                 soundUploaderID: props.sound.user_id
                 }
             })
-        })
+        }).then(response => response.json())
+        .then(result => result.cartItem[0])
+        .then(item => props.addItemToCartItems(item))
     }
 
     return (
