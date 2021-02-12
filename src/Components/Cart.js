@@ -24,7 +24,7 @@ export default class Cart extends Component {
 
     render () {
         return (
-            <div>
+            <div id='cart-items-container'>
                 {this.showItems()}
             </div>
         )
