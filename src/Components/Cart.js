@@ -4,11 +4,20 @@ import CartItem from './CartItem';
 export default class Cart extends Component {
 
     state = {
+        cartItems: this.props.cartItems,
         audioFiles: []
     }
 
+    removeItemFromCartItems = (item) => {
+        console.log(item.file.id)
+        this.setState({ 
+            cartItems: this.state.cartItems.filter(cartItem => cartItem.id !== item.cartItemID),
+            audioFiles: this.state.audioFiles.filter(audioFile => audioFile.file.id !== item.file.id)
+        })
+    }
+
     componentDidMount = () => {
-        return this.props.cartItems.forEach(item => {
+        return this.state.cartItems.forEach(item => {
             fetch(`http://localhost:4000/sounds/${item.soundID}`)
                 .then(response => response.json())
                 .then(result => result.file)
@@ -18,7 +27,7 @@ export default class Cart extends Component {
 
     showItems = () => {
         return this.state.audioFiles.map(file => {
-            return <CartItem item={file} key={file.id} />
+            return <CartItem item={file} key={file.id} removeItemFromCartItems={this.removeItemFromCartItems} />
         })
     }
 
