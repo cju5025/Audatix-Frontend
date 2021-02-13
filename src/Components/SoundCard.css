@@ -39,12 +39,24 @@
     font-size: 1.5vh;
 }
 
-#category {
+#category-and-cart-button {
+    display: flex;
+    flex-direction: row;
     width: 10vw;
     margin-left: 1vw; 
     margin-top: -3vh;
     color: black;
     font-size: 2vh;
+}
+
+#category {
+    min-width: 7.5vw;
+}
+
+#category-and-cart-button button {
+    min-width: 10vw;
+    margin-left: 7.5vw;
+    max-height: 2.5vh;
 }
 
 
@@ -78,6 +90,10 @@
     outline: none;
 }
 
+#audio {
+    margin-left: 2.5vw;
+}
+
 #sound-card audio {
     display: flex;
     justify-content: center;
@@ -85,4 +101,21 @@
     min-width: 10vw;
     height: 5vh;
     margin-top: 2.5vh;
+}
+
+#contact-info {
+    background-color: white;
+    z-index: 100;
+    position: absolute;
+    margin-top: -25vh;
+    margin-left: 80vw;
+    width: 15vw;
+    height: 10vh;
+    padding-left: 2.55vw;
+}
+
+#contact-info p {
+    font-size: 2.5vh;
+    margin-top: 1vh;
+    margin-bottom: 2.5vh;
 }
