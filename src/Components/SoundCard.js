@@ -21,8 +21,13 @@ export default function SoundCard (props) {
 
     return (
         <div id="sound-card">
-        <div id="name">
+        <div id="name-and-creator">
+            <div id="name">
             <h1>{props.sound.name}</h1>
+            </div>
+            <div id="contact">
+            <button>Contact the Creator</button>
+            </div>
         </div>
         <div id="category">
             <h2>{props.sound.category}</h2>

@@ -13,6 +13,10 @@ export default class Upload extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        const formData = new FormData(event.target)
+        const file = formData.get('file')
+        // console.log(file)
+        // console.log(new FormData(event.target))
         
         fetch('http://localhost:4000/upload', {
             method: 'POST', 
