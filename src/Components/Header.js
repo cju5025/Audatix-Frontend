@@ -34,8 +34,9 @@ export default function Header (props) {
                     localStorage.getItem('token')
                     ?
                     <>
+                    <img id="user-icon" src="https://i.ibb.co/5KKGT06/USERICON-removebg-preview.png" />
                     <Link to="/cart">
-                    <img id="cart-image" src="" />
+                    <img id="cart-image" src="https://i.ibb.co/cYPhFMJ/image.png" />
                     </Link>
                     <Link id='signout-link' to='/home' onClick={signOut}>
                     Sign Out
