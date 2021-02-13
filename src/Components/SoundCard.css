@@ -10,13 +10,33 @@
     margin-left: 50vw;
 }
 
-#name {
+#name-and-creator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     margin-top: -2.5vh;
     margin-left: -2.5vw;
     padding: 5vh;
     width: 10vw;
     color: #012521;
     font-size: 2.5vh;
+}
+
+#name {
+    min-width: 7.5vw;
+    margin-left: 15.5vw;
+}
+
+#contact {
+    min-width: 10vw;
+    margin-left: 7.5vw;
+}
+
+#contact button {
+    margin-right: -10vw;
+    margin-top: -10vh;
+    min-width: 10vw;
+    font-size: 1.5vh;
 }
 
 #category {

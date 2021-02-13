@@ -9,7 +9,6 @@ export default class Cart extends Component {
     }
 
     removeItemFromCartItems = (item) => {
-        console.log(item.file.id)
         this.setState({ 
             cartItems: this.state.cartItems.filter(cartItem => cartItem.id !== item.cartItemID),
             audioFiles: this.state.audioFiles.filter(audioFile => audioFile.file.id !== item.file.id)
