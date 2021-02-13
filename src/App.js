@@ -43,10 +43,11 @@ export default class App extends Component {
         <main id="main">
           {this.state.discover ?   
             <div id="discover-dropdown">
-                <a>Category 1</a>
-                <a>Category 2</a>
-                <a>Category 3</a>
-                <a>Category 4</a>
+                <a>Film</a>
+                <a>Game</a>
+                <a>Electronics</a>
+                <a>Machine</a>
+                <a>Foley</a>
             </div>
           :
           null}
