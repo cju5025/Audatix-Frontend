@@ -1,4 +1,5 @@
 #sound-card {
+    border-radius: .5vh;
     background-color: white;
     font-family: 'Bebas Neue', cursive;
     margin-top: 5vh;
@@ -33,6 +34,7 @@
 }
 
 #contact button {
+    margin-left: .5vw;
     margin-right: -10vw;
     margin-top: -10vh;
     min-width: 10vw;

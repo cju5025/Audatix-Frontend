@@ -18,8 +18,8 @@ export default class FindSoundsPage extends Component {
     render() {
         return (
             <div>
-                <SearchFilter />
-                <SoundCollection sounds={this.state.sounds} userID={this.props.userID} addItemToCartItems={this.props.addItemToCartItems}/>
+                <SearchFilter cartItems={this.props.cartItems} />
+                <SoundCollection sounds={this.state.sounds} userID={this.props.userID} addItemToCartItems={this.props.addItemToCartItems} />
             </div>
         )
     }

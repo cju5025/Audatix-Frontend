@@ -123,13 +123,5 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(241, 236, 228);
-}
-
-#cart-items-container {
-    /* display: flex; */
-    /* flex-direction: row; */
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(241, 236, 228);
+    background-color: rgb(248, 246, 244);
 }
