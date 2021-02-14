@@ -37,6 +37,12 @@ export default class Cart extends Component {
                 <div id='cart-items-container'>
                     {this.showItems()}
                 </div>
+                <div id="totals">
+                    <p>Sub Total: $3.80 </p>
+                    <p>Tax: $0.73</p>
+                    <p>Total: $4.20</p>
+                    <button>Checkout</button>
+                </div>
             </div>
         )
     }

@@ -1,11 +1,37 @@
 #cart-page {
-    background-color: rgb(248, 246, 244);
+    background-color: white;
 }
 
 #cart-items-container {
     display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /* height: 50vh;
+    width: 100vw; */
+    margin-left: -50vw;
+}
+
+#totals {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    width: 70vw;
+    justify-content: center;
+    height: 50vh;
+    background-color:white;
+    margin-top: -75vh;
+}
+
+#totals p {
+    font-size: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+#totals button {
+    width: 7.5vw;
+    height: 5vh;
+    color: white;
+    background-color: #012521;
+    border-radius: .25vw;
 }
