@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import CartItem from './CartItem';
+import './Cart.css';
 
 export default class Cart extends Component {
 
@@ -32,8 +33,10 @@ export default class Cart extends Component {
 
     render () {
         return (
-            <div id='cart-items-container'>
-                {this.showItems()}
+            <div id="cart-page">
+                <div id='cart-items-container'>
+                    {this.showItems()}
+                </div>
             </div>
         )
     }

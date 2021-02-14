@@ -1,6 +1,7 @@
 import './SearchFilter.css';
+import Cart from './Cart';
 
-export default function SearchFilter () {
+export default function SearchFilter (props) {
     return (
         <div id="search-filter-container">
             <h1>Showing 1-25 of 100 sounds</h1>
@@ -26,7 +27,12 @@ export default function SearchFilter () {
                     <label htmlFor="machine">Machine</label>
                     <input type="checkbox" value="Machine" id="machine"/>
             </form>
+            <form>
                 <label>Sub-Category</label>
+            </form> 
+            {/* <div id="cart-section">
+                <Cart cartItems={props.cartItems} />
+            </div>        */}
         </div>
     )
 }
