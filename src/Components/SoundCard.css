@@ -59,7 +59,7 @@
 #category-and-cart-button button {
     min-width: 10vw;
     margin-left: 7.5vw;
-    max-height: 2.5vh;
+    max-height: 3vh;
 }
 
 
@@ -84,8 +84,11 @@
 #sound-card button {
     font-family: 'Bebas Neue', cursive;
     border-radius: .5vw;
+    height: 5vh;
+    font-size: 2vh;
     color: white;
     background-color: #012521;
+    opacity: .9;
 }
 
 
