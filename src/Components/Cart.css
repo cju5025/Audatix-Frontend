@@ -4,20 +4,26 @@
 
 #cart-items-container {
     display: flex;
-    flex-direction: column;
-    width: 50vw;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60vw;
     height: 100vh;
+    padding-top: 10vh;
+    margin-left: 0vw;
+    margin-right: 0vw;
 }
 
 #totals {
+    background-color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 50vw;
     height: 100vh;
-    background-color:white;
+    padding-top: 10vh;
     margin-top: -100vh;
+    margin-left: 50vw;
 }
 
 #totals p {

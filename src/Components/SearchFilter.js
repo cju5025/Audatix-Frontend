@@ -7,7 +7,7 @@ export default function SearchFilter (props) {
             <h1>Showing 1-25 of 100 sounds</h1>
 
             <form id="sort-form">
-                <label>Sort By</label>
+                <label>Sort By:</label>
                 <select name="" id="">
                     <option>Alphabetical</option>
                     <option>Price: Lowest First</option>
@@ -36,7 +36,7 @@ export default function SearchFilter (props) {
                 </div>
             </form>
             <form id="sub-category-form">
-                <label>Sub-Category</label>
+                <label>Sub-Category:</label>
                 <br/>
                 <div>
                     <input type="checkbox" value="Film & Game" id="film-and-game" />
