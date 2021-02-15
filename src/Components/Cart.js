@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import CartItem from './CartItem';
+import { Link } from 'react-router-dom';
 import './Cart.css';
 
 export default class Cart extends Component {
@@ -41,7 +42,10 @@ export default class Cart extends Component {
                     <p>Sub Total: $3.80 </p>
                     <p>Tax: $0.73</p>
                     <p>Total: $4.20</p>
+                    <Link to="/checkout">
                     <button>Checkout</button>
+                    </Link>
+                    
                 </div>
             </div>
         )
