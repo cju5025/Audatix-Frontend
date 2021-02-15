@@ -8,11 +8,12 @@
 #sound-collection {
     background-color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: wrap;
     flex-wrap: wrap;
+    flex-flow: wrap;
     margin-top: -50vh;
-    margin-left: -20vw;
+    margin-left: 25vw;
     margin-right: 0vw;
     height: 100vh;
-    width: 100vw;
+    width: 80vw;
 }
