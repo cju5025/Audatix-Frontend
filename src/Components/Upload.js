@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Upload.css';
 
 export default class Upload extends Component {
@@ -63,13 +64,13 @@ export default class Upload extends Component {
                 <form onSubmit={this.handleFileSubmit} encType="multipart/form-data" id="upload-form">
                     <input type="file" name="file" id="file-input" />
 
-                    <input id="upload-submit" type="submit" value="Upload File" />
+                    <input class="upload-submit" type="submit" value="Upload File" />
                 </form>
 
                 {
                     this.state.postSuccessful
                     ?
-                    <form onSubmit={this.handleInfoSubmit}>
+                    <form onSubmit={this.handleInfoSubmit} id="upload-info-form">
                     <label>Name: </label>
                         <input name="fileName" placeholder="File name" />
 
@@ -89,10 +90,22 @@ export default class Upload extends Component {
                             <option value="Score">Score</option>
                         </select>
 
-                        <label>Price</label>
-                        <input name="filePrice" placeholder="$" id="price" />
-
-                        <input type="submit" />
+                        <div id="price-container">
+                            <label>Price: </label>
+                            <select name="filePrice" id="price">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="Upload Sound" class="upload-submit" />
                     </form>
                     :
                     null
