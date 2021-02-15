@@ -7,7 +7,10 @@ export default class Cart extends Component {
 
     state = {
         cartItems: this.props.cartItems,
-        audioFiles: []
+        audioFiles: [],
+        subTotal: 0,
+        tax: 0,
+        total: 0
     }
 
     removeItemFromCartItems = (item) => {
@@ -18,7 +21,7 @@ export default class Cart extends Component {
     }
 
     componentDidMount = () => {
-        return this.state.cartItems.forEach(item => {
+        this.state.cartItems.forEach(item => {
             fetch(`http://localhost:4000/sounds/${item.soundID}`)
                 .then(response => response.json())
                 .then(result => result.file)
@@ -32,6 +35,22 @@ export default class Cart extends Component {
         })
     }
 
+    showTotals = () => {
+        const prices = this.state.audioFiles.map(file => file.file.price);
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        const subTotal = prices.length > 0 ? prices.reduce(reducer) : 0
+        const tax = subTotal * 0.06
+        const total = subTotal + tax
+
+        return (
+            <div>
+            <p>Sub Total: ${subTotal} </p>
+            <p>Tax: ${tax}</p>
+            <p>Total: ${total}</p>
+            </div>
+        )
+    }
+
     render () {
         return (
             <div id="cart-page">
@@ -39,9 +58,7 @@ export default class Cart extends Component {
                     {this.showItems()}
                 </div>
                 <div id="totals">
-                    <p>Sub Total: $3.80 </p>
-                    <p>Tax: $0.73</p>
-                    <p>Total: $4.20</p>
+                {this.showTotals()}
                     <Link to="/checkout">
                     <button>Checkout</button>
                     </Link>
