@@ -6,10 +6,13 @@
 }
 
 #sound-collection {
-    margin-top: -50vh;
+    background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -50vh;
+    margin-left: -20vw;
+    margin-right: 0vw;
     height: 100vh;
     width: 100vw;
-    background-color: white;
 }
