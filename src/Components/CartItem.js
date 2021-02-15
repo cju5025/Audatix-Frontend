@@ -12,7 +12,7 @@ export default function CartItem (props) {
         <div id='cart-item'>
             <h1>{props.item.file.name}</h1>
             <h2>${props.item.file.price}</h2>
-            <audio src={props.item.file.location} controls />
+            <audio src={props.item.file.location} controls controlsList="nodownload" />
             <button onClick={removeFromCart} >Remove From Cart</button>
         </div>
     )
