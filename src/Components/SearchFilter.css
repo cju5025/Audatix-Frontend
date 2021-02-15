@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 #search-filter-container {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(77, 77, 77);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +26,75 @@
     margin-right: .5vw;
 }
 
-#search-filter-form {
+#sort-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+#sort-form select {
+    font-family: 'Roboto', sans-serif;
+    padding: .25vh;
+    
+}
+
+#category-form {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1vw;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    border-top: .25vh solid black;
+    border-bottom: .25vh solid black;
+}
+
+#category-form div {
+    margin-bottom: 1vh;
+}
+
+#sub-category-form {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1vw;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    border-top: .25vh solid black;
+    border-bottom: .25vh solid black;
+}
+
+#sub-category-form div {
+    margin-bottom: 1vh;
+}
+
+#price-form {
+    margin-top: 2.5vh;
     display: flex;
     flex-direction: column;
 }
+
+#price-label {
+    margin-bottom: 1vh;
+}
+
+#min-max-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#min-max-container div {
+    display: flex;
+    margin-top: 1vh;
+}
+
+#min-max-container select {
+    margin-right: 2.5vw;
+    width: 3vw;
+}
+
+
+
+
