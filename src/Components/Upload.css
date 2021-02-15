@@ -6,6 +6,7 @@
 }
 
 #file-input {
+    /* color: #012521; */
     color: white;
 }
 
@@ -20,19 +21,42 @@
     margin-top: 2.5vh;
 }
 
-#upload-form select {
-    margin-top: 2.5vh;
+#upload-info-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-left: 40vw;
+    width: 15vw;
+}
+
+#upload-info-form label {
+    color: white;
+    margin-bottom: 1vh;
+}
+
+#upload-info-form input {
+    margin-bottom: 2vh;
+}
+
+#upload-info-form select {
+    margin-bottom: 2vh;
+}
+
+#price-container {
+    display: flex;
+    flex-direction: row;
 }
 
 #price {
-    max-width: 5vw;
+    margin-top: -5vh;
+    max-width: 3.5vw;
 }
 
-#upload-submit {
-    color: white;
+.upload-submit {
+    color: #012521;
     display: flex;
     justify-content: center;
-    background-color: black;
+    background-color: white;
     border-radius: .5vw;
     width: 7.5vw;
     height: 3.5vh;
