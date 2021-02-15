@@ -60,7 +60,7 @@ export default class SoundCard extends Component {
                         <h3>${this.props.sound.price}</h3>
                     </div>
                     <div id="audio">
-                        <audio src={this.props.sound.location} controls />
+                        <audio src={this.props.sound.location} controls controlsList="nodownload" />
                     </div>
                 </div>
                 {
