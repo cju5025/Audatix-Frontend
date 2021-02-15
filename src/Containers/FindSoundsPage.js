@@ -2,6 +2,8 @@ import { Component } from 'react';
 import SearchFilter from '../Components/SearchFilter';
 import SoundCollection from './SoundCollection';
 
+import './FindSoundsPage.css';
+
 export default class FindSoundsPage extends Component {
     state = {
         sounds: []
@@ -17,7 +19,7 @@ export default class FindSoundsPage extends Component {
 
     render() {
         return (
-            <div>
+            <div id="find-sounds-page">
                 <SearchFilter cartItems={this.props.cartItems} />
                 <SoundCollection sounds={this.state.sounds} userID={this.props.userID} addItemToCartItems={this.props.addItemToCartItems} />
             </div>

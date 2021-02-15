@@ -3,10 +3,12 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
-    width: 35vw;
+    width: 25vw;
     margin-right: -75vw;
-    height: 100vh;
-    outline: solid black;
+    margin-top: 0vh;
+    position: fixed;
+    height: 75vh;
+    outline: .25vh solid black;
 }
 
 #search-filter-container h1 {
