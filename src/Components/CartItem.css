@@ -2,7 +2,7 @@
     background-color: white;
     font-family: 'Bebas Neue', cursive;
     margin-top: 5vh;
-    box-shadow: .25vw .25vw .25vw  #012521;
+    box-shadow: .5vw .25vw .25vw  #012521;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,6 +19,7 @@
     width: 10vw;
     color: white;
     background-color: #012521;
+    opacity: .8;
     border-radius: .25vw;
 }
 
