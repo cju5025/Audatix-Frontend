@@ -6,7 +6,6 @@
 }
 
 #file-input {
-    /* color: #012521; */
     color: white;
 }
 
@@ -48,8 +47,8 @@
 }
 
 #price {
-    margin-top: -5vh;
-    max-width: 3.5vw;
+    margin-top: 0vh;
+    max-width: 5vw;
 }
 
 .upload-submit {
@@ -61,4 +60,38 @@
     width: 7.5vw;
     height: 3.5vh;
     min-width: 10vw;
+    margin-left: 2.5vw;
+}
+
+#first-submit {
+    margin-right: 3.5vw;
+}
+
+#upload-more-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    margin-top: 2.5vh;
+    margin-left: 37vw;
+    height: 10vh;
+    width: 20vw;
+}
+
+#upload-more-container label {
+    color: white;
+    font-size: 2.5vh;
+}   
+
+#upload-more-container button {
+    height: 3vh;
+    width: 5vw;
+    margin-right: -2vw;
+    color: #012521;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: .25vw;
 }

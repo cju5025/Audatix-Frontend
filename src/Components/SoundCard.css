@@ -88,9 +88,12 @@
     font-size: 2vh;
     color: white;
     background-color: #012521;
-    opacity: .9;
+    opacity: .8;
 }
 
+#sound-card button:hover {
+    box-shadow: inset 0px 0px 0px 50px rgba(0, 0, 0, 0.6);
+}
 
 #sound-card audio:focus {
     outline: none;
