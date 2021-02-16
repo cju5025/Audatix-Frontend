@@ -1,6 +1,8 @@
 import { Component } from 'react';
-import CartItem from './CartItem';
 import { Link } from 'react-router-dom';
+import CartItem from './CartItem';
+import Checkout from './Checkout';
+
 import './Cart.css';
 
 export default class Cart extends Component {
@@ -59,10 +61,10 @@ export default class Cart extends Component {
                 </div>
                 <div id="totals">
                 {this.showTotals()}
-                    <Link to="/checkout">
+                    {/* <Link to="/checkout">
                     <button>Checkout</button>
-                    </Link>
-                    
+                    </Link> */}
+                    <Checkout />
                 </div>
             </div>
         )
