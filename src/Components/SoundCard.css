@@ -118,10 +118,10 @@
     position: absolute;
     margin-top: -25vh;
     margin-left: 5vw;
-    width: 12.5vw;
-    height: 10vh;
-    padding-left: 2.55vw;
-    border: .02vw dotted black;
+    width: 15vw;
+    height: 12vh;
+    padding-left: .55vw;
+    border: .02vw solid black;
 }
 
 #contact-info p {
