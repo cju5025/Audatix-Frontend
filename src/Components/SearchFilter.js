@@ -1,7 +1,6 @@
 import './SearchFilter.css';
-import Cart from './Cart';
 
-export default function SearchFilter (props) {
+export default function SearchFilter () {
     return (
         <div id="search-filter-container">
             <h1>Showing 1-25 of 100 sounds</h1>
@@ -34,25 +33,33 @@ export default function SearchFilter (props) {
                     <input type="checkbox" value="Score" id="score"/>
                     <label htmlFor="score">Score</label>
                 </div>
+                <div>
+                    <input type="checkbox" value="Foley" id="foley"/>
+                    <label htmlFor="foley">Foley</label>
+                </div>
             </form>
             <form id="sub-category-form">
                 <label>Sub-Category:</label>
                 <br/>
                 <div>
-                    <input type="checkbox" value="Film & Game" id="film-and-game" />
-                    <label htmlFor="film-and-game">Film & Game</label>
+                    <input type="checkbox" value="Film & Game" id="film-and-game-sub" />
+                    <label htmlFor="film-and-game-sub">Film & Game</label>
                 </div>
                 <div>
-                    <input type="checkbox" value="Electronics" id="electronics"/>
-                    <label htmlFor="electronics">Electronics</label>
+                    <input type="checkbox" value="Electronics" id="electronics-sub"/>
+                    <label htmlFor="electronics-sub">Electronics</label>
                 </div> 
                 <div>
-                    <input type="checkbox" value="Machine" id="machine"/>
-                    <label htmlFor="machine">Machine</label>
+                    <input type="checkbox" value="Machine" id="machine-sub"/>
+                    <label htmlFor="machine-sub">Machine</label>
                 </div>
                 <div>
-                    <input type="checkbox" value="Score" id="score"/>
-                    <label htmlFor="score">Score</label>
+                    <input type="checkbox" value="Score" id="score-sub"/>
+                    <label htmlFor="score-sub">Score</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="Foley" id="foley-sub"/>
+                    <label htmlFor="foley-sub">Foley</label>
                 </div>
             </form> 
             <form id="price-form">

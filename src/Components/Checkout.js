@@ -3,12 +3,18 @@ import './Checkout.css'
 
 export default function Checkout (props) {
 
+    const audioFiles = props.audioFiles.map(audioFile => audioFile.file)
+
     const [total, setTotal] = useState(props.total);
+
+    const userID = ''
+
+    const totalValue = total.toFixed(2)
 
     const paypal = useRef()
 
     useEffect(() => {
-        const totalValue = total.toFixed(2)
+        console.log(`Audio Files: ${audioFiles}, user id: ${userID}`)
         window.paypal.Buttons({
             createOrder: (data, actions, error) => {
                 return actions.order.create({
@@ -26,6 +32,8 @@ export default function Checkout (props) {
             },
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture()
+                // Thank you screen with a couple second timeout
+                // helper function that creates purchaced_items
                 window.location.replace('http://localhost:3000/profilePage');
             },
             onError: (error) => {
