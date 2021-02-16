@@ -5,7 +5,8 @@ import './Upload.css';
 export default class Upload extends Component {
 
     state = {
-        postSuccessful: false
+        postSuccessful: false,
+        uploadAgain: false
     }
 
     handleFileSubmit = (event) => {
@@ -55,16 +56,16 @@ export default class Upload extends Component {
             })
         })
         .then(response => response.json())
-        .then(console.log)
+        .then(this.setState({ uploadAgain: !this.state.uploadAgain }))
     }
 
     render () {
         return (
-            <div>
+            <div classname="upload">
                 <form onSubmit={this.handleFileSubmit} encType="multipart/form-data" id="upload-form">
                     <input type="file" name="file" id="file-input" />
 
-                    <input class="upload-submit" type="submit" value="Upload File" />
+                    <input class="upload-submit" id="first-submit" type="submit" value="Upload File" />
                 </form>
 
                 {
@@ -110,6 +111,19 @@ export default class Upload extends Component {
                     :
                     null
                 }
+                {
+                        this.state.uploadAgain
+                        ?
+                        <div id="upload-more-container">
+                            <label>Upload More?</label>
+                            <button>Yes</button>
+                            <Link to='/soundCollection'>
+                            <button>No</button>
+                            </Link>
+                        </div>
+                        :
+                        null
+                    }
             </div>
         )
     }

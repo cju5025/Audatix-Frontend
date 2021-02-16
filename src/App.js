@@ -11,6 +11,7 @@ import Upload from './Components/Upload';
 import FindSoundsPage from './Containers/FindSoundsPage';
 import Cart from './Components/Cart';
 import Checkout from './Components/Checkout';
+import UploadContainer from './Containers/UploadContainer';
 
 import { Route, Redirect } from 'react-router-dom';
 
