@@ -1,16 +1,39 @@
-import { Component } from 'react';
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { useRef, useEffect } from 'react';
 import './Checkout.css'
 
-export default class Checkout extends Component {
+export default function Checkout () {
 
-    render () {
+    const paypal = useRef()
+
+    useEffect(() => {
+        window.paypal.Buttons({
+            createOrder: (data, actions, error) => {
+                return actions.order.create({
+                    intent: "CAPTURE",
+                    purchase_units: [
+                        {
+                            description: 'Sound Design',
+                            amount: {
+                                currency_code: "USD",
+                                value: 1.00
+                            }
+                        }
+                    ]
+                })
+            },
+            onApprove: async (data, actions) => {
+                const order = await actions.order.capture()
+                console.log(`succesful order: ${order}`)
+            },
+            onError: (error) => {
+                console.log(error)
+            }
+        }).render(paypal.current)
+    }, [])
+
         return (
             <div id="checkout-container">
-                <PayPalScriptProvider options={{ "client-id": "sb" }}>
-                    <PayPalButtons style={{ layout: "horizontal" }} />
-                </PayPalScriptProvider>
+            <div ref={paypal} />
             </div>
         )
-    }
 }
