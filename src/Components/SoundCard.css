@@ -3,7 +3,7 @@
     background-color: white;
     font-family: 'Bebas Neue', cursive;
     margin-top: 5vh;
-    box-shadow: .25vw .25vw .25vw  #012521;
+    box-shadow: .125vw .125vw .25vw  #012521;
     display: flex;
     flex-direction: column;
     height: 25vh;

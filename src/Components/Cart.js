@@ -43,8 +43,8 @@ export default class Cart extends Component {
         const subTotal = prices.length > 0 ? prices.reduce(reducer) : 0
         const tax = (subTotal * 0.06)
         const total = (subTotal + tax)
+
         const showTotals = () => {
-    
             return (
                 <div>
                 <p>Sub Total: ${subTotal.toFixed(2)} </p>
@@ -64,7 +64,7 @@ export default class Cart extends Component {
                     {/* <Link to="/checkout">
                     <button>Checkout</button>
                     </Link> */}
-                    <Checkout key={total} total={total} />
+                    <Checkout key={total} total={total} audioFiles={this.state.audioFiles} />
                 </div>
             </div>
         )
