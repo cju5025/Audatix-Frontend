@@ -61,6 +61,7 @@ export default function SearchFilter (props) {
                 <div>
                 <label>Min</label>
                 <select>
+                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -76,6 +77,7 @@ export default function SearchFilter (props) {
                 <div>
                 <label>Max</label>
                 <select>
+                    <option value="∞">∞</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

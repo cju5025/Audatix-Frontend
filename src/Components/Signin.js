@@ -30,7 +30,7 @@ export default class Signin extends Component {
             if (response.token) {
                 localStorage.setItem('token', response.token)
                 localStorage.setItem('user_id', response.user.id)
-                window.location.reload()
+                window.location.replace('http://localhost:3000/home')
             }
             else {
                 throw new Error(response)

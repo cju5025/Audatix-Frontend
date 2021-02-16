@@ -24,7 +24,7 @@ export default function Checkout (props) {
             },
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture()
-                console.log(`succesful order: ${order}`)
+                window.location.replace('http://localhost:3000/profilePage');
             },
             onError: (error) => {
                 console.log(error)

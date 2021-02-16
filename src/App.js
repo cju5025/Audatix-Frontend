@@ -12,6 +12,7 @@ import FindSoundsPage from './Containers/FindSoundsPage';
 import Cart from './Components/Cart';
 import Checkout from './Components/Checkout';
 import UploadContainer from './Containers/UploadContainer';
+import ProfilePage from './Components/ProfilePage';
 
 import { Route, Redirect } from 'react-router-dom';
 
@@ -62,8 +63,9 @@ export default class App extends Component {
           <Route path="/soundCollection" render={(routerProps) => <FindSoundsPage {...routerProps} userID={this.state.userID} cartItems={this.state.cartItems} addItemToCartItems={this.addItemToCartItems} />} />
           <Route path="/cart" render={(routerProps) => <Cart {...routerProps} cartItems={this.state.cartItems} />} />
           <Route path='/checkout' render={(routerProps) => <Checkout {...routerProps} /> } />
+          <Route path='/profilePage' render={(routerProps) => <ProfilePage {...routerProps} /> } />
         </main>
-        <Redirect to="/home"/>
+        {/* <Redirect to="/home"/> */}
       </div>
     )
   }
