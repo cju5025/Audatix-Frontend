@@ -1,12 +1,14 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import './Checkout.css'
 
 export default function Checkout (props) {
 
+    const [total, setTotal] = useState(props.total);
+
     const paypal = useRef()
 
     useEffect(() => {
-        console.log(props.total)
+        const totalValue = total.toFixed(2)
         window.paypal.Buttons({
             createOrder: (data, actions, error) => {
                 return actions.order.create({
@@ -16,7 +18,7 @@ export default function Checkout (props) {
                             description: 'Sound Design',
                             amount: {
                                 currency_code: "USD",
-                                value: props.total
+                                value: totalValue
                             }
                         }
                     ]
