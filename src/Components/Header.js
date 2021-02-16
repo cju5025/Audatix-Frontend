@@ -34,7 +34,9 @@ export default function Header (props) {
                     localStorage.getItem('token')
                     ?
                     <>
+                    <Link to='/profilePage'>
                     <img id="user-icon" src="https://i.ibb.co/5KKGT06/USERICON-removebg-preview.png" />
+                    </Link>
                     <Link to="/cart">
                     <img id="cart-image" src="https://i.ibb.co/cYPhFMJ/image.png" />
                     </Link>
