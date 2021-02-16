@@ -1,0 +1,19 @@
+#profile-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+
+#user-info-card {
+    background-color: white;
+    padding-top: 10vh;
+    width: 20vw;
+    height: 20vh;
+    /* border-right: .025vw solid black; */
+    border-bottom: .025vw solid black;
+}
+
+#user-info-card p {
+    margin-left: 5vw;
+    font-size: 2.5vh;
+}

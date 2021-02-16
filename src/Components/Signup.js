@@ -79,7 +79,7 @@ export default class Signup extends Component {
                 {
                     this.state.redirect
                     ?
-                    <Redirect to='/home' />
+                    <Redirect to='/signin' />
                     :
                     null
                 }

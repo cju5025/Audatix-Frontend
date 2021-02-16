@@ -63,7 +63,7 @@ export default class App extends Component {
           <Route path="/soundCollection" render={(routerProps) => <FindSoundsPage {...routerProps} userID={this.state.userID} cartItems={this.state.cartItems} addItemToCartItems={this.addItemToCartItems} />} />
           <Route path="/cart" render={(routerProps) => <Cart {...routerProps} cartItems={this.state.cartItems} />} />
           <Route path='/checkout' render={(routerProps) => <Checkout {...routerProps} /> } />
-          <Route path='/profilePage' render={(routerProps) => <ProfilePage {...routerProps} /> } />
+          <Route path='/profilePage' render={(routerProps) => <ProfilePage {...routerProps} userID={this.state.userID} /> } />
         </main>
         {/* <Redirect to="/home"/> */}
       </div>
