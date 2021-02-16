@@ -27,7 +27,7 @@ export default class App extends Component {
   }
 
   addItemToCartItems = (item) => {
-    this.setState({ cartItems: [...this.state.cartItems, item]})
+      this.setState({ cartItems: [...this.state.cartItems, item]})
   }
 
   componentDidMount = () => {
