@@ -37,34 +37,34 @@ export default class Cart extends Component {
         })
     }
 
-    showTotals = () => {
+    render () {
         const prices = this.state.audioFiles.map(file => file.file.price);
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
         const subTotal = prices.length > 0 ? prices.reduce(reducer) : 0
         const tax = subTotal * 0.06
         const total = subTotal + tax
+        const showTotals = () => {
+    
+            return (
+                <div>
+                <p>Sub Total: ${subTotal} </p>
+                <p>Tax: ${tax}</p>
+                <p>Total: ${total}</p>
+                </div>
+            )
+        }
 
-        return (
-            <div>
-            <p>Sub Total: ${subTotal} </p>
-            <p>Tax: ${tax}</p>
-            <p>Total: ${total}</p>
-            </div>
-        )
-    }
-
-    render () {
         return (
             <div id="cart-page">
                 <div id='cart-items-container'>
                     {this.showItems()}
                 </div>
                 <div id="totals">
-                {this.showTotals()}
+                {showTotals()}
                     {/* <Link to="/checkout">
                     <button>Checkout</button>
                     </Link> */}
-                    <Checkout />
+                    <Checkout total={total} />
                 </div>
             </div>
         )

@@ -16,7 +16,7 @@ export default function Checkout (props) {
                             description: 'Sound Design',
                             amount: {
                                 currency_code: "USD",
-                                value: 1.00
+                                value: props.total
                             }
                         }
                     ]

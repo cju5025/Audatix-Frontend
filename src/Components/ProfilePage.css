@@ -14,6 +14,7 @@
 }
 
 #user-info-card p {
+    margin-bottom: 1vh;
     margin-left: 5vw;
     font-size: 2.5vh;
 }
