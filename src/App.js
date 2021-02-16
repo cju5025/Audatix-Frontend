@@ -14,6 +14,8 @@ import Checkout from './Components/Checkout';
 
 import { Route, Redirect } from 'react-router-dom';
 
+// Client ID AazB4ztMTc-OC1tHIS37H1JY_g4lBVKXjKxjg2qjn9DWRZ_aiTqW0ADaafGP8aVJLgTfUxAPgDeRE9zP
+
 export default class App extends Component {
 
   state = {
