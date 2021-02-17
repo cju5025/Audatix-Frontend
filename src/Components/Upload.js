@@ -6,7 +6,8 @@ export default class Upload extends Component {
 
     state = {
         postSuccessful: false,
-        uploadAgain: false
+        uploadAgain: false,
+        loading: false
     }
 
     handleFileSubmit = (event) => {
@@ -59,14 +60,31 @@ export default class Upload extends Component {
         .then(this.setState({ uploadAgain: !this.state.uploadAgain }))
     }
 
+    load = () => {
+        this.setState({ loading: true })
+    }
+
     render () {
         return (
             <div classname="upload">
                 <form onSubmit={this.handleFileSubmit} encType="multipart/form-data" id="upload-form">
                     <input type="file" name="file" id="file-input" />
 
-                    <input class="upload-submit" id="first-submit" type="submit" value="Upload File" />
+                    <input class="upload-submit" id="first-submit" type="submit" value="Upload File" onClick={this.load} />
                 </form>
+                {
+                    this.state.loading && !this.state.postSuccessful
+                    ?
+                    <div id="upload-loading-container">
+                        <img src="https://i.ibb.co/Czhb80H/loading-gif.gif" id="upload-loading-gif" />
+                        <div id="upload-loading-text-container">
+                            <p id="upload-loading-text">Uploading file to cloud</p>
+                            <p class="dot-pulse">•••</p>
+                        </div>
+                    </div>
+                    :
+                    null
+                }
 
                 {
                     this.state.postSuccessful
