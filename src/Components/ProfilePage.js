@@ -4,15 +4,22 @@ import './ProfilePage.css';
 export default class ProfilePage extends Component {
 
     state = {
-        user: {}
+        user: {},
+        purchasedItems: []
     }
 
     componentDidMount = () => {
-        const id = this.props.userID
-        fetch(`http://localhost:4000/users/${id}`)
+        const userID = this.props.userID
+        fetch(`http://localhost:4000/users/${userID}`)
             .then(response => response.json())
             .then(result => result.user)
             .then(user => this.setState({ user: user }))
+
+            fetch('http://localhost:4000/purchasedItems')
+                .then(response => response.json())
+                .then(result => result.items)
+                .then(items => items.filter(item => item.userID === userID))
+                .then(filteredItems => this.setState({ purchasedItems: filteredItems }))
     }
 
     render () {
