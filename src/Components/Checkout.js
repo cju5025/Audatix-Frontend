@@ -47,7 +47,7 @@ export default function Checkout (props) {
                 })
             },
             onApprove: async (data, actions) => {
-                const order = await actions.order.capture()
+                // const order = await actions.order.capture()
                 // Thank you screen with a couple second timeout
                 createPurchasedItems()
                 window.location.replace('http://localhost:3000/profilePage');

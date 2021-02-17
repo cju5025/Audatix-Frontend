@@ -41,3 +41,16 @@
     background-color: #012521;
     border-radius: .25vw;
 }
+
+#totals-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#totals-labels-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: -.5vw;
+    margin-right: 2.5vw;
+}
+
