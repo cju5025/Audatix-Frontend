@@ -1,12 +1,12 @@
 import './SoundCard.css';
 import { Component } from 'react';
-import ContactInfo from './ContactInfo';
 
 export default class SoundCard extends Component {
 
     state = {
         contactInfo: [],
-        showContactInfo: false
+        showContactInfo: false,
+        cartButtonClicked: false
     }
 
     showContactInfo = () => {
@@ -21,21 +21,24 @@ export default class SoundCard extends Component {
     }
 
     addToCart = () => {
-        fetch('http://localhost:4000/cartItems', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ cartItem: {
-                userID: this.props.userID,
-                soundID: this.props.sound.id,
-                price: this.props.sound.price,
-                soundUploaderID: this.props.sound.user_id
-                }
-            })
-        }).then(response => response.json())
-        .then(result => result.cartItem[0])
-        .then(item => this.props.addItemToCartItems(item))
+        if (!this.state.cartButtonClicked){
+            fetch('http://localhost:4000/cartItems', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ cartItem: {
+                    userID: this.props.userID,
+                    soundID: this.props.sound.id,
+                    price: this.props.sound.price,
+                    soundUploaderID: this.props.sound.user_id
+                    }
+                })
+            }).then(response => response.json())
+            .then(result => result.cartItem[0])
+            .then(item => this.props.addItemToCartItems(item))
+            .then(this.setState({ cartButtonClicked: true }))
+        }
     }
 
     render () {

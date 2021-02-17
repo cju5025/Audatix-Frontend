@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import SoundCard from '../Components/SoundCard';
-import ContactInfo from '../Components/ContactInfo';
 
 export default class SoundCollection extends Component {
 
