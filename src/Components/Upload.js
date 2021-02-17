@@ -119,7 +119,7 @@ export default class Upload extends Component {
                         <div id="upload-more-container">
                             <label>Upload More?</label>
                             <button>Yes</button>
-                            <Link to='/soundCollection'>
+                            <Link to='/soundCollection' id="No">
                             <button>No</button>
                             </Link>
                         </div>

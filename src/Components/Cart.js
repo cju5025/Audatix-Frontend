@@ -26,9 +26,6 @@ export default class Cart extends Component {
     }
 
     componentDidMount = () => {
-        //this isnt working because the id is different, lets compare soundid
-        //or should we nip this when adding to cart, higher up?
-        
         this.state.cartItems.forEach(item => {
             fetch(`http://localhost:4000/sounds/${item.soundID}`)
             .then(response => response.json())
@@ -40,7 +37,7 @@ export default class Cart extends Component {
 
     showItems = () => {
         const uniqAudioFiles = unique(this.state.audioFiles)
-        console.log(uniqAudioFiles)
+        // console.log(uniqAudioFiles)
         return uniqAudioFiles.map(file => {
             return <CartItem item={file} key={file.id} removeItemFromCartItems={this.removeItemFromCartItems} />
         })

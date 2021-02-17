@@ -3,9 +3,9 @@ import './CartItem.css';
 export default function CartItem (props) {
 
     const removeFromCart = () => {
-        props.removeItemFromCartItems(props.item)
         const id = props.item.cartItemID
         fetch(`http://localhost:4000/cartitems/${id}`, { method: 'DELETE' })
+        props.removeItemFromCartItems(props.item)
     }
 
     return (
