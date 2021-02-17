@@ -1,4 +1,7 @@
 #purchased-items-container {
+    width: 100vw;
+    height: 75vh;
     display: flex;
     flex-direction: wrap;
+    flex-wrap: wrap;
 }
