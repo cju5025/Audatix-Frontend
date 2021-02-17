@@ -1,0 +1,4 @@
+#purchased-items-container {
+    display: flex;
+    flex-direction: wrap;
+}
