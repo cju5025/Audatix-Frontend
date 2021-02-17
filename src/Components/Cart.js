@@ -5,6 +5,9 @@ import Checkout from './Checkout';
 
 import './Cart.css';
 
+const unique = require('array-unique');
+
+
 export default class Cart extends Component {
 
     state = {
@@ -23,16 +26,22 @@ export default class Cart extends Component {
     }
 
     componentDidMount = () => {
+        //this isnt working because the id is different, lets compare soundid
+        //or should we nip this when adding to cart, higher up?
+        
         this.state.cartItems.forEach(item => {
             fetch(`http://localhost:4000/sounds/${item.soundID}`)
-                .then(response => response.json())
-                .then(result => result.file)
-                .then(file => this.setState({ audioFiles: [...this.state.audioFiles, {file: file, cartItemID: item.id}]}))
+            .then(response => response.json())
+            .then(result => result.file)
+            .then(file => this.setState({ audioFiles: [...this.state.audioFiles, {file: file, cartItemID: item.id}]}))
         })
     }
+    
 
     showItems = () => {
-        return this.state.audioFiles.map(file => {
+        const uniqAudioFiles = unique(this.state.audioFiles)
+        console.log(uniqAudioFiles)
+        return uniqAudioFiles.map(file => {
             return <CartItem item={file} key={file.id} removeItemFromCartItems={this.removeItemFromCartItems} />
         })
     }
@@ -64,7 +73,7 @@ export default class Cart extends Component {
                     {/* <Link to="/checkout">
                     <button>Checkout</button>
                     </Link> */}
-                    <Checkout key={total} total={total} audioFiles={this.state.audioFiles} />
+                    <Checkout key={total} total={total} audioFiles={this.state.audioFiles} userID={this.props.userID} />
                 </div>
             </div>
         )

@@ -3,18 +3,34 @@ import './Checkout.css'
 
 export default function Checkout (props) {
 
-    const audioFiles = props.audioFiles.map(audioFile => audioFile.file)
+    const audioFileIDs = props.audioFiles.map(audioFile => audioFile.file.id)
 
     const [total, setTotal] = useState(props.total);
 
-    const userID = ''
+    const userID = props.userID
 
     const totalValue = total.toFixed(2)
 
     const paypal = useRef()
 
+    const createPurchasedItems = () => {
+        audioFileIDs.forEach(audioFileID => {
+            fetch('http://localhost:4000/purchasedItems', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    purchasedItem: {
+                        userID: userID,
+                        itemID: audioFileID,
+                    }
+                })
+            })
+        })
+    }
+
     useEffect(() => {
-        console.log(`Audio Files: ${audioFiles}, user id: ${userID}`)
         window.paypal.Buttons({
             createOrder: (data, actions, error) => {
                 return actions.order.create({
@@ -33,7 +49,7 @@ export default function Checkout (props) {
             onApprove: async (data, actions) => {
                 const order = await actions.order.capture()
                 // Thank you screen with a couple second timeout
-                // helper function that creates purchaced_items
+                createPurchasedItems()
                 window.location.replace('http://localhost:3000/profilePage');
             },
             onError: (error) => {
