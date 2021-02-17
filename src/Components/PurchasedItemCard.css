@@ -59,7 +59,7 @@
     flex-direction: row;
     justify-content: space-around;
     margin-top: 4vh;
-    margin-left: .25vw;
+    margin-right: 2.5vw;
     min-width: 5vw;
     min-height: 7.5vh;
 }
