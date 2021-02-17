@@ -12,7 +12,7 @@
     margin-left: 5vw;
 }
 
-#name-and-creator {
+#item-name-and-creator {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -24,17 +24,17 @@
     font-size: 2.5vh;
 }
 
-#name {
+#item-name {
     min-width: 7.5vw;
     margin-left: 15.5vw;
 }
 
-#contact {
+#item-contact {
     min-width: 10vw;
     margin-left: 7.5vw;
 }
 
-#contact button {
+#item-contact button {
     margin-left: .5vw;
     margin-right: -10vw;
     margin-top: -10vh;
@@ -43,7 +43,7 @@
     font-size: 1.5vh;
 }
 
-#category {
+#item-category {
     display: flex;
     flex-direction: row;
     width: 10vw;
@@ -54,16 +54,7 @@
     font-size: 2vh;
 }
 
-
-#price {
-    color: black;
-    font-size: 2vh;
-    padding: .5vh;
-    margin-top: 1.5vh;
-    margin-left: .5vw;
-}
-
-#audio {
+#item-audio {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -90,11 +81,11 @@
     outline: none;
 }
 
-#audio {
+#item-audio {
     margin-left: 2.5vw;
 }
 
-#sound-card audio {
+#purchased-item-card audio {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +94,7 @@
     margin-top: 2.5vh;
 }
 
-#contact-info {
+/* #contact-info {
     background-color: white;
     z-index: 100;
     position: absolute;
@@ -119,4 +110,4 @@
     font-size: 2.5vh;
     margin-top: 1vh;
     margin-bottom: 2.5vh;
-}
+} */

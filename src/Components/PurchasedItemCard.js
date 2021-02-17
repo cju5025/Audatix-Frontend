@@ -17,18 +17,18 @@ export default class PurchasedItemCard extends Component {
         return (
             <div id="purchased-item-card">
                 <div>
-                    <div id="name-and-creator">
-                        <div id="name">
+                    <div id="item-name-and-creator">
+                        <div id="item-name">
                             <h1>{this.state.audioFile.name}</h1>
                         </div>
-                        <div id="contact">
+                        <div id="item-contact">
                             <button>Contact the Creator</button>
                         </div>
                     </div>
-                    <div id="category">
+                    <div id="item-category">
                         <h2>{this.state.audioFile.category}</h2>
                     </div>
-                    <div id="audio">
+                    <div id="item-audio">
                         <audio src={this.state.audioFile.location} controls />
                     </div>
                 </div>
