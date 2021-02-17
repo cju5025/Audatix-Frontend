@@ -6,10 +6,9 @@
 
 #user-info-card {
     background-color: white;
-    padding-top: 10vh;
+    padding-top: 7.5vh;
+    padding-bottom: 2.5vh;
     width: 20vw;
-    height: 20vh;
-    /* border-right: .025vw solid black; */
     border-bottom: .025vw solid black;
 }
 
