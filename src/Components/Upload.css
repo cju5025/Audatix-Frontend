@@ -1,3 +1,4 @@
+
 #upload-form {
     display: flex;
     flex-direction: column;
@@ -22,7 +23,7 @@
 
 #upload-loading-container {
     margin-top: 2.5vh;
-    margin-left: 42.5vw;
+    margin-left: 41.5vw;
 }
 
 #upload-loading-gif {
@@ -45,8 +46,12 @@
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
-    margin-left: 40vw;
-    width: 15vw;
+    margin-left: 35vw;
+    padding-left: 2.5vw;
+    width: 20vw;
+    height: 40vh;
+    padding-top: 2.5vh;
+    border-left: .025vw solid white;
 }
 
 #upload-info-form label {
@@ -55,16 +60,26 @@
 }
 
 #upload-info-form input {
-    margin-bottom: 2vh;
+    margin-bottom: 2.5vh;
 }
 
 #upload-info-form select {
     margin-bottom: 2vh;
+    width: 20vw;
 }
 
 #price-container {
     display: flex;
+    align-items: center;
     flex-direction: row;
+}
+
+#price-container p {
+    color: white;
+    margin-left: .25vw;
+    margin-top: -2vh;
+    letter-spacing: .125vw;
+    font-size: 2.25vh;
 }
 
 #price {
@@ -72,7 +87,12 @@
     max-width: 5vw;
 }
 
+#price-input {
+    width: 2.5vw;
+}
+
 .upload-submit {
+    font-size: 2vh;
     color: #012521;
     display: flex;
     justify-content: center;
@@ -81,11 +101,11 @@
     width: 7.5vw;
     height: 3.5vh;
     min-width: 10vw;
-    margin-left: 2.5vw;
+    margin-left: 5vw;
 }
 
 #first-submit {
-    margin-right: 3.5vw;
+    margin-right: 10vw;
 }
 
 #upload-more-container {

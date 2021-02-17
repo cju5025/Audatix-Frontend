@@ -38,7 +38,7 @@ export default class Upload extends Component {
         const fileCategory = fileInfoFormData.get('fileCategory')
         const fileSubCategory = fileInfoFormData.get('fileSubCategory')
         const userID = this.props.userID
-        const filePrice = fileInfoFormData.get('filePrice')
+        const filePrice = parseInt(fileInfoFormData.get('filePrice'))
         
         fetch('http://localhost:4000/audioFiles', {
             method: 'POST',
@@ -111,20 +111,10 @@ export default class Upload extends Component {
                             <option value="Film & Game">Film & Game</option>
                         </select>
 
+                        <label id="price-label">Price: </label>
                         <div id="price-container">
-                            <label>Price: </label>
-                            <select name="filePrice" id="price">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select>
+                            <input name="filePrice" placeholder="1.00" value="1.00" id="price-input" />
+                            <p>USD</p>
                         </div>
                         <input type="submit" value="Upload Sound" class="upload-submit" />
                     </form>
