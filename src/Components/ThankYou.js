@@ -10,7 +10,9 @@ export default class ThankYou extends Component {
     }
 
     timeoutRedirect = () => {
-        setTimeout(() => { window.location.replace('http://localhost:3000/profilePage') }, 3000)
+        setTimeout(() => { 
+            window.location.replace('http://localhost:3000/profilePage') 
+        }, 2000)
     }
 
     componentDidMount = () => {
@@ -27,8 +29,10 @@ export default class ThankYou extends Component {
     render(){
         return (
             <div id="thank-you-container">
+                <img id="thanks-gif" src="https://media1.giphy.com/media/xULW8l2gXuRPmsQe8U/giphy.gif"/>
                 <h1 id="thanks">Thanks, {this.state.user.firstName}!</h1>
-                <h2>If you don't find yourself redirected to your profile page after a few seconds, click <Link to="profilePage">here</Link></h2>
+                <h2 id="redirect-offer">If you don't find yourself redirected to your profile page after a few seconds, click <Link to="profilePage" id="profile-link">here</Link></h2>
+                <img id="thanks-gif" src="https://media1.giphy.com/media/xULW8l2gXuRPmsQe8U/giphy.gif"/>
             </div>
         )
     }

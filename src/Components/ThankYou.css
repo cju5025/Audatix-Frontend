@@ -1,15 +1,28 @@
 #thank-you-container {
     background-color: white;
-    margin-top: 10vh;
-    margin-left: 40vh;
-    width: 60vw;
-    height: 60vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     border-radius: 10px;
+}
+#thanks-gif {
+    height: 35vh;
 }
 
 #thanks {
     font-size: 15vh;
 }
+
+#profile-link {
+    color: purple;
+    text-decoration: none;
+}
+
+#redirect-offer {
+    text-shadow: .5px .5px black;
+    margin-top: 2.5vh;
+    font-size: 2.5vh;
+}
+
