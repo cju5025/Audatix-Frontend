@@ -1,12 +1,8 @@
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import Checkout from './Checkout';
 
 import './Cart.css';
-
-const unique = require('array-unique');
-
 
 export default class Cart extends Component {
 
@@ -36,9 +32,7 @@ export default class Cart extends Component {
     
 
     showItems = () => {
-        const uniqAudioFiles = unique(this.state.audioFiles)
-        // console.log(uniqAudioFiles)
-        return uniqAudioFiles.map(file => {
+        return this.state.audioFiles.map(file => {
             return <CartItem item={file} key={file.id} removeItemFromCartItems={this.removeItemFromCartItems} />
         })
     }
@@ -67,9 +61,6 @@ export default class Cart extends Component {
                 </div>
                 <div id="totals">
                 {showTotals()}
-                    {/* <Link to="/checkout">
-                    <button>Checkout</button>
-                    </Link> */}
                     <Checkout key={total} total={total} audioFiles={this.state.audioFiles} userID={this.props.userID} />
                 </div>
             </div>
