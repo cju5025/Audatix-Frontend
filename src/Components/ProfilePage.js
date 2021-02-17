@@ -1,15 +1,17 @@
 import { Component } from 'react';
+import PurchasedItemsContainer from './PurchasedItemsContainer';
 import './ProfilePage.css';
 
 export default class ProfilePage extends Component {
 
     state = {
         user: {},
-        purchasedItems: []
+        purchasedItems: [],
     }
 
     componentDidMount = () => {
         const userID = this.props.userID
+
         fetch(`http://localhost:4000/users/${userID}`)
             .then(response => response.json())
             .then(result => result.user)
@@ -22,6 +24,10 @@ export default class ProfilePage extends Component {
                 .then(filteredItems => this.setState({ purchasedItems: filteredItems }))
     }
 
+    showItems = () => {
+        return <PurchasedItemsContainer purchasedItems={this.state.purchasedItems} />
+    }
+
     render () {
         return (
             <div id="profile-container">
@@ -30,6 +36,7 @@ export default class ProfilePage extends Component {
                     <p>{this.state.user.username}</p>
                     <p>{this.state.user.email}</p>
                 </div>
+                    {this.showItems()}
             </div>
         )
     }
