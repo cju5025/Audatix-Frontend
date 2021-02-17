@@ -81,6 +81,7 @@ export default class Upload extends Component {
                             <option value="Electronics">Electronics</option>
                             <option value="Machine">Machine</option>
                             <option value="Score">Score</option>
+                            <option value="Foley">Foley</option>
                         </select>
 
                         <label>Sub Category: </label>
@@ -89,6 +90,7 @@ export default class Upload extends Component {
                             <option value="Machine">Machine</option>
                             <option value="Electronics">Electronics</option>
                             <option value="Score">Score</option>
+                            <option value="Film & Game">Film & Game</option>
                         </select>
 
                         <div id="price-container">
