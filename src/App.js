@@ -13,6 +13,7 @@ import Cart from './Components/Cart';
 import Checkout from './Components/Checkout';
 import UploadContainer from './Containers/UploadContainer';
 import ProfilePage from './Components/ProfilePage';
+import ThankYou from './Components/ThankYou';
 
 import { Route, Redirect } from 'react-router-dom';
 
@@ -62,8 +63,8 @@ export default class App extends Component {
           <Route path="/cart" render={(routerProps) => <Cart {...routerProps} cartItems={this.state.cartItems} userID={this.state.userID} />} />
           <Route path='/checkout' render={(routerProps) => <Checkout {...routerProps} /> } />
           <Route path='/profilePage' render={(routerProps) => <ProfilePage {...routerProps} userID={this.state.userID} /> } />
+          <Route path='/thankYou' render={(routerProps) => <ThankYou {...routerProps} userID={this.state.userID} /> } />
         </main>
-        {/* <Redirect to="/home"/> */}
       </div>
     )
   }

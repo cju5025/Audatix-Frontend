@@ -50,7 +50,7 @@ export default function Checkout (props) {
                 // const order = await actions.order.capture()
                 // Thank you screen with a couple second timeout
                 createPurchasedItems()
-                window.location.replace('http://localhost:3000/profilePage');
+                window.location.replace('http://localhost:3000/thankYou');
             },
             onError: (error) => {
                 console.log(error)
