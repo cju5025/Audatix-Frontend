@@ -4,6 +4,13 @@
     background-color: white;
 }
 
+#my-collection {
+    display: flex;
+    justify-content: center;
+    font-size: 5vh;
+    padding-top: 2.5vh;
+}
+
 #user-info-card {
     background-color: white;
     padding-top: 7.5vh;

@@ -31,6 +31,7 @@ export default class ProfilePage extends Component {
     render () {
         return (
             <div id="profile-container">
+            <h1 id="my-collection">My Collection</h1>
                 <div id="user-info-card">
                     <p>{this.state.user.firstName}{" "}{this.state.user.lastName}</p>
                     <p>{this.state.user.username}</p>
