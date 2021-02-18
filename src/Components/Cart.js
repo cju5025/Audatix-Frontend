@@ -47,16 +47,16 @@ export default class Cart extends Component {
         const showTotals = () => {
             return (
                 <div id="totals-container">
-                <div id="totals-labels-container">
-                <p>Subtotal:</p>
-                <p>Tax:</p>
-                <p>Total:</p>
-                </div>
-                <div id="totals-values-container">
-                <p>${subTotal.toFixed(2)} </p>
-                <p>${tax.toFixed(2)}</p>
-                <p>${total.toFixed(2)}</p>
-                </div>
+                    <div id="totals-labels-container">
+                    <p>Subtotal:</p>
+                    <p>Tax:</p>
+                    <p>Total:</p>
+                    </div>
+                    <div id="totals-values-container">
+                    <p>${subTotal.toFixed(2)} </p>
+                    <p>${tax.toFixed(2)}</p>
+                    <p>${total.toFixed(2)}</p>
+                    </div>
                 </div>
             )
         }
