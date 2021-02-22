@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 #App {
-    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Big Shoulders Display', sans-serif;
     background-color: #012521;
     height: 100vh;
     width: 100vw;
@@ -63,7 +61,7 @@
 #sign-up-button {
     display: flex;
     justify-content: center;
-    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Big Shoulders Display', sans-serif;
     font-size: 2.25vh;
     letter-spacing: .5px;
     font-weight: 600;
@@ -126,7 +124,7 @@
 #sign-in-button {
     display: flex;
     justify-content: center;
-    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Big Shoulders Display', sans-serif;
     font-size: 2.25vh;
     letter-spacing: .5px;
     font-weight: 600;

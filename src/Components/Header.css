@@ -16,7 +16,7 @@
 #sign-in-button {
     display: flex;
     justify-content: center;
-    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Big Shoulders Display', sans-serif;
     font-size: 2.25vh;
     letter-spacing: .5px;
     font-weight: 600;
@@ -36,7 +36,7 @@
     width: 5vw;
     display: flex;
     justify-content: center;
-    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Big Shoulders Display', sans-serif;
     font-size: 2.25vh;
     letter-spacing: .75px;
     color: #012521;
