@@ -1,7 +1,7 @@
 #purchased-item-card {
     border-radius: .5vh;
     background-color: white;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', sans-serif;
     margin-top: 5vh;
     box-shadow: .125vw .125vw .25vw  #012521;
     display: flex;
@@ -65,7 +65,7 @@
 }
 
 #purchased-item-card button {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', sans-serif;
     border-radius: .5vw;
     font-size: 2vh;
     color: white;
